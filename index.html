@@ -133,8 +133,12 @@
     /* ── CARDS ── */
     .cards {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(4, 1fr);
       gap: 1.25rem;
+    }
+
+    @media (max-width: 1024px) {
+      .cards { grid-template-columns: repeat(2, 1fr); }
     }
 
     .card {
@@ -168,6 +172,7 @@
     .card-1 { --card-accent-a: #3b82f6; --card-accent-b: #06b6d4; }
     .card-2 { --card-accent-a: #10b981; --card-accent-b: #6ee7b7; }
     .card-3 { --card-accent-a: #f59e0b; --card-accent-b: #fbbf24; }
+    .card-4 { --card-accent-a: #a855f7; --card-accent-b: #d8b4fe; }
 
     .card-icon {
       width: 44px; height: 44px;
@@ -309,7 +314,7 @@
   <main>
     <div class="section-label">// Dashboard-Zentrale</div>
     <h1>Alle Tools.<br><em>Eine Seite.</em></h1>
-    <p class="subtitle">Direktzugriff auf deine drei Google Apps — kein Suchen, kein Tippen.</p>
+    <p class="subtitle">Direktzugriff auf deine vier Google Apps — kein Suchen, kein Tippen.</p>
 
     <div class="cards">
 
@@ -349,6 +354,18 @@
         </a>
       </div>
 
+      <!-- Card 4: Portfolio Edelmetalle -->
+      <div class="card card-4">
+        <div class="card-num">04</div>
+        <div class="card-icon">🪙</div>
+        <div class="card-title">Portfolio Edel</div>
+        <div class="card-desc">Edelmetall-Portfolio. Gold-, Silber- und Rohstoffbestände im Überblick.</div>
+        <a class="card-btn" href="https://tinyurl.com/PortfolioEdel" target="_blank" rel="noopener">
+          Öffnen
+          <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        </a>
+      </div>
+
     </div>
 
     <!-- Quick-Access Bar -->
@@ -358,6 +375,7 @@
         <a class="quick-link" href="https://tinyurl.com/TradeCloud" target="_blank" rel="noopener">TradeCloud</a>
         <a class="quick-link" href="https://tinyurl.com/TSC-Dashboard" target="_blank" rel="noopener">TSC Dashboard</a>
         <a class="quick-link" href="https://tinyurl.com/PortfolioWimly78" target="_blank" rel="noopener">Portfolio</a>
+        <a class="quick-link" href="https://tinyurl.com/PortfolioEdel" target="_blank" rel="noopener">Portfolio Edel</a>
       </div>
     </div>
   </main>
